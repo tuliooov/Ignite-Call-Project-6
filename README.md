@@ -1,38 +1,35 @@
-<p align="center">
-  <img alt="Rocketseat Education" src="https://avatars.githubusercontent.com/u/69590972?s=200&v=4" width="100px" />
-</p>
+## ChatGPT Teacher
 
-<p align="center">
-  <img src="https://img.shields.io/static/v1?label=Rocketseat&message=Education&color=8257e5&labelColor=202024" alt="Rocketseat Project" />
-  <a href="LICENSE"><img  src="https://img.shields.io/static/v1?label=License&message=MIT&color=8257e5&labelColor=202024" alt="License"></a>
-</p>
+I connected chatgpt in my project.
+
+<img width="1332" alt="image" src="https://github.com/tuliooov/Ignite-Call-Project-6/assets/28486303/3552bea9-e9c4-4dfb-bc97-f47886469fcc">
 
 
-## 💻 Projeto
+## 🛠️ In this project was used
 
-06-ignite-call
+- NextJS
+- Typescript
+- Vercel Host
+- Stichis
+- Mongodb Atlas
+- Prisma
+- PWA
+- zod
+- googleapis
 
-## 📝 Licença
+## Start project
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+- create file .env
+- Add ENVs
+  - DATABASE_URL="mongodb+srv://:@cluster0.o0dhq6m.mongodb.net/projectIgniteCall"
+  - GOOGLE_CLIENT_ID=
+  - GOOGLE_CLIENT_SECRET=
+  - NEXTAUTH_SECRET=
+- npx prisma generate
+- npm run dev
+- locale: http://localhost:3000
 
----
+## Deployed
 
-<p align="center">
-  Feito com 💜 by Rocketseat
-</p>
-
-
-<!--START_SECTION:footer-->
-
-<br />
-<br />
-
-<p align="center">
-  <a href="https://discord.gg/rocketseat" target="_blank">
-    <img align="center" src="https://storage.googleapis.com/golden-wind/comunidade/rodape.svg" alt="banner"/>
-  </a>
-</p>
-
-<!--END_SECTION:footer-->
+- https://ignite-call-project-6.vercel.app/
 
