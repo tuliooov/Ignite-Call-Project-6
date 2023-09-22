@@ -7,6 +7,7 @@ export function buildNextAuthOptions(
   req: NextApiRequest | NextPageContext['req'],
   res: NextApiResponse | NextPageContext['res'],
 ): NextAuthOptions {
+  
   return {
     adapter: PrismaAdapter(req, res),
     providers: [

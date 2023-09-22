@@ -6,6 +6,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
+  console.log("🚀 ~ file: index.api.ts:9 ~ req:", req.body)
   if (req.method !== 'POST') {
     return res.status(405).end()
   }

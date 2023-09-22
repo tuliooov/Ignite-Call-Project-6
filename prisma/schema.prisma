@@ -3,16 +3,16 @@ generator client {
 }
 
 datasource db {
-  provider     = "mysql"
+  provider     = "mongodb"
   url          = env("DATABASE_URL")
   relationMode = "prisma"
 }
 
 model User {
-  id         String   @id @default(uuid())
+  id         String   @id @default(uuid()) @map("_id")
   username   String   @unique
   name       String
-  bio        String?  @db.Text
+  bio        String?  
   email      String?  @unique
   avatar_url String?
   created_at DateTime @default(now())
@@ -26,17 +26,17 @@ model User {
 }
 
 model Account {
-  id                  String  @id @default(cuid())
+  id                  String  @id @default(cuid()) @map("_id")
   user_id             String
   type                String
   provider            String
   provider_account_id String
-  refresh_token       String? @db.Text
-  access_token        String? @db.Text
+  refresh_token       String? 
+  access_token        String? 
   expires_at          Int?
   token_type          String?
   scope               String?
-  id_token            String? @db.Text
+  id_token            String? 
   session_state       String?
 
   user User @relation(fields: [user_id], references: [id], onDelete: Cascade)
@@ -47,7 +47,7 @@ model Account {
 }
 
 model Session {
-  id            String   @id @default(cuid())
+  id            String   @id @default(cuid()) @map("_id")
   session_token String   @unique
   user_id       String
   expires       DateTime
@@ -58,7 +58,7 @@ model Session {
 }
 
 model UserTimeInterval {
-  id                    String @id @default(uuid())
+  id                    String @id @default(uuid()) @map("_id")
   week_day              Int
   time_start_in_minutes Int
   time_end_in_minutes   Int
@@ -71,7 +71,7 @@ model UserTimeInterval {
 }
 
 model Scheduling {
-  id           String   @id @default(uuid())
+  id           String   @id @default(uuid()) @map("_id")
   date         DateTime
   name         String
   email        String
